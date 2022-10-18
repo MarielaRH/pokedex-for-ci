@@ -1,3 +1,4 @@
+[![deployment-pipeline](https://github.com/MarielaRH/pokedex-for-ci/actions/workflows/pipeline.yml/badge.svg)](https://github.com/MarielaRH/pokedex-for-ci/actions/workflows/pipeline.yml)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
