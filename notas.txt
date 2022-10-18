@@ -1,0 +1,14 @@
+CI/CD
+
+CI (Continuous integration)
+
+CI nos permite integrar nuestra aplicación constantemente.
+La integración continua es un sistema de automatización que verifica la integridad/calidad del código para poder subirlo a producción
+
+
+# Configuración de un workflow
+
+1. name, este será el nombre con el que se idenfiticará el workflow dentro de la pestaña actions en gh.
+2. on, evento que desencadenará la ejecución del workflow.
+3. jobs, trabajos que se realizarán estos puede tener un nombre y dentro de ellos se definirá sobre qué máquina queremos correrlo (runs-on), luego habrá que definir los pasos que se deberán
+seguir, a su vez los pasos están compuestos por un nombre (name) y un script o comando a ejecutar (run).
