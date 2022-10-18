@@ -11,4 +11,9 @@ La integración continua es un sistema de automatización que verifica la integr
 1. name, este será el nombre con el que se idenfiticará el workflow dentro de la pestaña actions en gh.
 2. on, evento que desencadenará la ejecución del workflow.
 3. jobs, trabajos que se realizarán estos puede tener un nombre y dentro de ellos se definirá sobre qué máquina queremos correrlo (runs-on), luego habrá que definir los pasos que se deberán
-seguir, a su vez los pasos están compuestos por un nombre (name) y un script o comando a ejecutar (run).
+   seguir.
+4. steps, cada paso puede estar compuesto por un nombre (name) y una acción a ejecutar(run), cada paso debe ser iniciado con el signo (-)
+   por ejemplo:
+      steps:
+      - name: Nombre del paso (campo opcional)
+      run: comando o script a ejecutar
