@@ -15,5 +15,6 @@ La integración continua es un sistema de automatización que verifica la integr
 4. steps, cada paso puede estar compuesto por un nombre (name) y una acción a ejecutar(run), cada paso debe ser iniciado con el signo (-)
    por ejemplo:
       steps:
+      - uses: son acciones externas que se pueden utilizar dentro del workflow, la más común es actions/checkout@v# que sirve para traernos nuestro código
       - name: Nombre del paso (campo opcional)
       run: comando o script a ejecutar
