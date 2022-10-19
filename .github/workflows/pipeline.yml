@@ -24,4 +24,4 @@ jobs:
         with:
           command: npm run test:e2e
           start: npm run start-test
-          wait-on: htpp://localhost:8080
+          wait-on: http://localhost:8080
