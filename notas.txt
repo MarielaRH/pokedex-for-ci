@@ -27,3 +27,7 @@ segundos más rápido
 Dentro de la CI es necesario que tengamos una configuración que evite que un workflow tenga más de 1 ejecución ejecutandosé en paralelo
 
 rollback --> descartar cambios y regresar a una versión estable y funcional de un proyecto
+
+Para ejecutar jobs cuando se cumpla una condición se puede hacer con el campo if
+
+Existe un documento llamado context object el cual contiene mucha información sobre el workflow
