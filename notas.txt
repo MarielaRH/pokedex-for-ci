@@ -18,3 +18,6 @@ La integración continua es un sistema de automatización que verifica la integr
       - uses: son acciones externas que se pueden utilizar dentro del workflow, la más común es actions/checkout@v# que sirve para traernos nuestro código
       - name: Nombre del paso (campo opcional)
       run: comando o script a ejecutar
+
+
+Con CI para instalar las dependencias se tiene un comandodo 
