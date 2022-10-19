@@ -1,8 +1,17 @@
 const express = require('express')
+const { version } = require('./package.json')
 const app = express()
 
 // Heroku dynamically sets a port
 const PORT = process.env.PORT || 8080
+
+app.get('/health',(res, res) => {
+  res.send('ok')
+})
+
+app.get('/version',(res, res) => {
+  res.send(version)
+})
 
 app.use(express.static('dist'))
 

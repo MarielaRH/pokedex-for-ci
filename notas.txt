@@ -25,3 +25,5 @@ el cual npm ci, lo que hace este comando es instalar las dependencias basándose
 segundos más rápido
 
 Dentro de la CI es necesario que tengamos una configuración que evite que un workflow tenga más de 1 ejecución ejecutandosé en paralelo
+
+rollback --> descartar cambios y regresar a una versión estable y funcional de un proyecto
