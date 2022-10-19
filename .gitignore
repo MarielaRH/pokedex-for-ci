@@ -5,6 +5,9 @@ dist/
 /node_modules
 /.pnp
 .pnp.js
+cypress/plugins
+cypress/support
+cypress/videos
 
 # testing
 /coverage
