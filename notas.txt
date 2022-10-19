@@ -21,4 +21,5 @@ La integración continua es un sistema de automatización que verifica la integr
 
 
 Con CI para instalar las dependencias tiene un comando más optimizado que npm install
-el cual npm ci, lo que hace este comando es instalar las dependencias basándose en lo que hay en el package.lock.json
+el cual npm ci, lo que hace este comando es instalar las dependencias basándose en lo que hay en el package.lock.json. Usando este comando en lugar del npm install hará que CI se realice unos
+segundos más rápido
