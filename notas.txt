@@ -31,5 +31,3 @@ rollback --> descartar cambios y regresar a una versión estable y funcional de 
 Para ejecutar jobs cuando se cumpla una condición se puede hacer con el campo if
 
 Existe un documento llamado context object el cual contiene mucha información sobre el workflow
-
-Ejemplo de cancelación de build reduntante
