@@ -31,3 +31,30 @@ rollback --> descartar cambios y regresar a una versión estable y funcional de 
 Para ejecutar jobs cuando se cumpla una condición se puede hacer con el campo if
 
 Existe un documento llamado context object el cual contiene mucha información sobre el workflow
+
+Dentro de un workflow se puede tener varios jobs y a su  vez cada job puede compartir información entre ellos, esto se hace mediante la empaquetación de información.
+Para ello se puede utilizar un action llamado action/upload-artifact el cual guarda en la nube información a la cual podremos acceder dentro de otro job. Por ejemplo
+si tenemos dos jobs uno que contruye la build y otro que realiza los test, el ultimo job (test) necesita la build para poder generar los test, por esa razón dentro del
+job build agregaremos la siguiente acción:
+
+- uses: action/upload-artifact@v#
+  with:
+   name: nombre del lugar en el que vamos a guardar la build
+   path: path de la ubicación de la información que vamos a empaquetar (build)
+
+Además de agregar ese step dentro de build, dentro del job test que es donde utilizaremos la build que se generó la build y la guardamos en la nube, debemos utilizar una acción
+para descargar la build que se encuentra en la nube, esto se hace de agregando el siguiente paso dentro del job test
+- name: actions/download-artifact@v2
+  with:
+   name: dist
+   path: dist
+
+Por último para ejecutar el job test necesitamos esperar primero que el job build ya se haya ejecutado y haya generado y guardado el build dentro de la nube para poder acceder al build desde
+el job test, para especificar que un job depende de otro existe un campo del cual podemos hacer uso el cual se llama "needs" este campo recibe un arrays con los nombres de los jobs de los cuales
+depende el job en el que lo definamos, por ejemplo
+
+Dentro del job test colocaremos el siguente valor:
+
+needs: [build]
+
+Con lo cual estaremos indicando que test requiere que el job build se haya ejecutado antes
