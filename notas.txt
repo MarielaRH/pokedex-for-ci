@@ -32,3 +32,4 @@ Para ejecutar jobs cuando se cumpla una condición se puede hacer con el campo i
 
 Existe un documento llamado context object el cual contiene mucha información sobre el workflow
 
+Ejemplo de cancelación de build reduntante
